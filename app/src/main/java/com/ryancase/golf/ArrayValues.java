@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+import java.sql.Array;
 import java.sql.Struct;
 import java.util.ArrayList;
 
@@ -39,6 +40,11 @@ public class ArrayValues {
     }
     public static int slope;
     public static float rating;
+
+    public static void resetArray(int arr[]) {
+        for(int i=0; i < arr.length; i++)
+            arr[i] = 0;
+    }
 
     public static void addTheThings(int a, int b, int c, int d, int e, int f, int num) {
         ArrayValues.girs[num] = a;

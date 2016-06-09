@@ -51,7 +51,8 @@
                 android:textSize="30pt"
                 android:textColor="@color/newGreen"
                 android:id="@+id/Hole1TV"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:clickable="true" />
 
         </TableRow>
 

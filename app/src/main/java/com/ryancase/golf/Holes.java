@@ -11,24 +11,35 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.text.InputType;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.NumberPicker;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 
 public class Holes extends FragmentActivity {
 
     //INSTANTIATE VARS//
     TextViewCust title;
+    TextView curr_score, curr_putts, curr_plusMinus;
     NumberPicker np, nptp;
     Checkbox p1, p2, p3, p4, fw, gir, ud;
     Button n, finish, exit;
     int numPutts = 0, score = 0, girInt = 0, fwInt = 0, udInt = 0, par = 0;
+    int currPutts=0;
+    int currPlusMinus=0;
+    int currScore=0;
 
     //DISABLE BACK BUTTON//
     @Override
@@ -46,9 +57,31 @@ public class Holes extends FragmentActivity {
         overridePendingTransition(R.anim.abc_slide_in_bottom, R.anim.abc_slide_out_top);
         //getWindow().getAttributes().windowAnimations = R.anim.abc_slide_in_bottom;
 
-        //holeCountInc();
+        currPutts=0;
+        currPlusMinus=0;
+        currScore=0;
 
         title = (TextViewCust) findViewById(R.id.Hole1TV);
+
+        OnClickListener titleListener =new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCurrentStats();
+            }
+        };
+        title.setOnClickListener(titleListener);
+
+        int[] placeHolder = new int[18];
+
+        for(int i=0; i<ArrayValues.scores.length; i++) {
+            placeHolder[i] = ArrayValues.par[i] + 3;
+
+            currScore += ArrayValues.scores[i];
+            if(ArrayValues.scores[i] != 0) {
+                currPlusMinus += (ArrayValues.scores[i] - placeHolder[i]);
+            }
+            currPutts += ArrayValues.putts[i];
+        }
 
         ud = (Checkbox) findViewById(R.id.ud_box);
         fw = (Checkbox) findViewById(R.id.fairway_box);
@@ -110,7 +143,18 @@ public class Holes extends FragmentActivity {
         OnClickListener exitList =new OnClickListener() {
             @Override
             public void onClick(View v) {
-                //ArrayValues.intList.clear();
+                ArrayValues.resetArray(ArrayValues.scores);
+                ArrayValues.resetArray(ArrayValues.putts);
+                ArrayValues.resetArray(ArrayValues.par);
+
+                currScore = 0;
+                currPutts = 0;
+                currPlusMinus = 0;
+                curr_score.setText("0");
+                curr_putts.setText("0");
+                curr_plusMinus.setText("0");
+
+
                 finish();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
@@ -118,6 +162,8 @@ public class Holes extends FragmentActivity {
         };
         exit.setOnClickListener(exitList);
         //EXIT BUTTON END//
+
+
     }
 
     public void getValues() {
@@ -288,44 +334,38 @@ public class Holes extends FragmentActivity {
         }); //END CHECKBOX SECTION
     }
 
-    public void askForCourse() {
+    public void showCurrentStats() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Where are you playing?");
-        builder.setCancelable(false);
-        // Set up the input
-        final EditText input = new EditText(this);
-        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-        input.setInputType(InputType.TYPE_CLASS_TEXT);
-        builder.setView(input);
+        //builder.setTitle("Current Stats");
+        builder.setCancelable(true);
 
-        // Set up the buttons
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            }
-        });
 
-        final AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-        alertDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-        alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Boolean wantToCloseDialog = (input.getText().toString().trim().isEmpty());
-                // if EditText is empty disable closing on positive button
-                if (!wantToCloseDialog) {
-                    ArrayValues.course = input.getText().toString();
-                    alertDialog.dismiss();
-                } else
-                    Toast.makeText(getApplicationContext(), "Please enter a course name", Toast.LENGTH_SHORT).show();
-            }
-        });
+        LayoutInflater inflater = getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.current_stats, null);
+        builder.setView(dialoglayout);
+
+        curr_score = (TextView) dialoglayout.findViewById(R.id.curr_score);
+        curr_putts = (TextView) dialoglayout.findViewById(R.id.curr_putts);
+        curr_plusMinus = (TextView) dialoglayout.findViewById(R.id.curr_plusMinus);
+        String plus = "+";
+
+        try {
+            curr_score.setText(String.valueOf(currScore));
+            curr_putts.setText(String.valueOf(currPutts));
+            if(currPlusMinus > 0)
+                curr_plusMinus.setText(plus + String.valueOf(currPlusMinus));
+            else
+                curr_plusMinus.setText(String.valueOf(currPlusMinus));
+        } catch (NullPointerException e) {
+            Log.d("Error: ", "" + e);
+        }
+
+
+        AlertDialog alert = builder.create();
+        alert.getWindow().setDimAmount(.2f);
+        alert.getWindow().getAttributes().y = -425;
+
+        alert.show();
     }
 
     public int parseHole(String s) {
