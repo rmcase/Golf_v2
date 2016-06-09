@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="score">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </integer-array>
+
+    <string-array name="par">
+        <item>Hole in One</item>
+        <item>Double Eagle</item>
+        <item>Eagle</item>
+        <item>Birdie</item>
+        <item>Par</item>
+        <item>Bogey</item>
+        <item>Double Bogey</item>
+        <item>Triple Bogey</item>
+        <item>Quadruple Bogey</item>
+        <item>Quintuple Bogey</item>
+    </string-array>
+</resources>

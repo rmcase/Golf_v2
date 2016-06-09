@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Golf Stats</string>
+
+    <string name="title">Golf Stats</string>
+    <string name="action_settings">Settings</string>
+    <string name="new_round">New Round</string>
+    <string name="history">History</string>
+    <string name="stats">Stats</string>
+    <string name="title_activity_start_round">Start Round</string>
+    <string name="h1">Hole 1</string>
+    <string name="h2">Hole 2</string>
+    <string name="h3">Hole 3</string>
+    <string name="h4">Hole 4</string>
+    <string name="h5">Hole 5</string>
+    <string name="h6">Hole 6</string>
+    <string name="h7">Hole 7</string>
+    <string name="h8">Hole 8</string>
+    <string name="h9">Hole 9</string>
+    <string name="h10">Hole 10</string>
+    <string name="h11">Hole 11</string>
+    <string name="h12">Hole 12</string>
+    <string name="h13">Hole 13</string>
+    <string name="h14">Hole 14</string>
+    <string name="h15">Hole 15</string>
+    <string name="h16">Hole 16</string>
+    <string name="h17">Hole 17</string>
+    <string name="h18">Hole 18</string>
+    <string name="Putts">Putts Per Round:</string>
+    <string name="Greens">Greens Per Round:</string>
+    <string name="Fairways">Fairways Per Round:</string>
+    <string name="Eagles">Eagles Per Round:</string>
+    <string name="Birdies">Birdies Per Round:</string>
+    <string name="Pars">Pars Per Round:</string>
+    <string name="Bogeys">Bogeys Per Round:</string>
+    <string name="Rounds">Rounds Played:</string>
+    <string name="Scores">Average Score:</string>
+    <string name="Uds">Up/Down Per Round:</string>
+    <string name="ScoreToPar">Avg. Score To Par:</string>
+    <string name="main_button_text">See a hot new custom dialog!</string>
+    <string name="alert_image_content_description">Alert Image</string>
+    <string name="help">How to start a new round: Click start round then for each hole
+        select your score for the hole on the left andthe par for the hole on the right.</string>
+</resources>

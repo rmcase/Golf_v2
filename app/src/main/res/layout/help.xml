@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/golf_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <com.ryancase.golf.TextViewCust
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30pt"
+        android:text="Help"
+        android:textColor="@color/green"
+        android:id="@+id/textView"
+        android:background="@color/blackOP"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView">
+    <TextView
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="10pt"
+        android:background="@color/blackOP"
+        android:textColor="@color/white"
+        android:text="How to start a new round:\n•Click start round, for each hole select your score for the hole on the left and the par for the hole on the right.\n•Select the number of putts for the hole next. Note: If you are unable to change your score for the hole you must deselect the number of putts then change the score.\n•Next select any applicable stats from the third row. GIR will automatically be filled in for you.\n\nTo return to a previous screen: Press the back soft key on your device\n\nTo delete a round:\nIn history if you wish to delete a round long press the round and a dialog will popup allowing you to delete your round.\n\nNote: A course will only appear in the course list if you have saved a round from that course\n\n\n\nAny questions not answered here can be sent to rm.case@icloud.com and I will address them as soon as possible. Thank you."
+        />
+    </ScrollView>
+
+
+    </RelativeLayout>

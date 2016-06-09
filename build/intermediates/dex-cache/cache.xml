@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/ryancase/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.3.0/27cabf3558be23a89f054334dd92512645ad34d9/bolts-android-1.3.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="27cabf3558be23a89f054334dd92512645ad34d9">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/pre-dexed/debug/bolts-android-1.3.0-3675b7c42830206cf806a7fd48c98084b541316e.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/classes-9051468ba605f3bf8d150ffb67bdea2325a25563.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/Downloads/adt-bundle-mac-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-bcabcd50e820aa3e34eead0a4fa4018bf70c6ff0.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/exploded-aar/com.parse/parseui-widget-android/0.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="76d7e619a84e1c57ad7b153ba84b1213f8ff9ef1">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/classes-42ad77501a293d3ed042835a534a89dd9aeec3fd.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0-d0c124764bcbe89af5cda0432c73bd48b64a5a53.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.4.0/cc174c559b5177982887bf6e1b76003aebad9516/bolts-android-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cc174c559b5177982887bf6e1b76003aebad9516">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/bolts-android-1.4.0-579467837c6e294e47baf3aff2716b5ff42bd579.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/pre-dexed/debug/classes-36cc4b6712f4a57f94fa5c4733ebde9ad1d94017.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-2deb02b71cea16e8291d1ac8f37812869e91c8ea.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/Downloads/adt-bundle-mac-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-19c700241f1d89cc88b9e76ddcbfb43bdeaca7c5.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/exploded-aar/com.parse/parseui-login-android/0.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4a2c63ab232bd2c7b750e74794015c8b09aca351">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/classes-ba0ee5ff7dcbe378fff3a0eaaa8f927bd416ce4f.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/pre-dexed/debug/classes-97b052dcdf0ff9d6bd48024f010a5dd51f6eb545.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.13.0/58a7d54b6a4f28be11f0cecec93097eddf473e6f/parse-android-1.13.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/parse-android-1.13.0-bed0649b77fd0b6b7e9073909021aa4b610fae93.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.3.0/bc535105332645408ef5f1380215cc954b842178/bolts-applinks-1.3.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="bc535105332645408ef5f1380215cc954b842178">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.3.0-c405eee622e9cb8861528ffa2f1debfcb6108859.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/classes-f4caf00aa01ae3e9e89c96c50fefc22e373c37e9.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf v2/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-b7465351c9e39c4d266506aaee5e4943c6f60500.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-fc2040dc0ac44114d920512d309e3273f89b48cb.jar" />
+    </item>
+    <item
+        jar="/Users/ryancase/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.3.0/8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c/bolts-tasks-1.3.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
+        <dex dex="/Users/ryancase/AndroidStudioProjects/Golf/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.3.0-0513616795232a998b5ca5398af1d5d1b3e9d993.jar" />
+    </item>
+
+</items>

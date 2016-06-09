@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stats_bg">
+
+    <com.ryancase.golf.TextViewCust
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Lifetime Stats"
+        android:paddingTop="7dp"
+        android:theme="@style/TitleText"
+        android:textSize="30pt"
+        android:textColor="@color/newGreen"
+        android:id="@+id/statsTitleM"
+        android:layout_gravity="center"
+        android:background="@color/white50"
+        android:layout_marginBottom="10dp"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/white50">
+
+            <com.ryancase.golf.TextViewCust
+                android:layout_height="wrap_content"
+                android:text="Lifetime Stats"
+                android:paddingTop="14dp"
+                android:theme="@style/TitleText"
+                android:textSize="30pt"
+                android:textColor="@color/newGreen"
+                android:id="@+id/statsTitle"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"/>
+        </TableRow>-->
+
+        <!--# ROUNDS-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingStart="8dp"
+                android:text="@string/Rounds"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:id="@+id/numRoundsHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:paddingRight="5dp"
+                android:id="@+id/numRoundsStat"/>
+        </TableRow>
+        <!--# ROUNDS-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE SCORE-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingStart="8dp"
+                android:text="@string/Scores"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStScoreHeader"/>
+            <TextView
+                android:paddingRight="10dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStScore"/>
+        </TableRow>
+        <!--AVERAGE SCORE-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE SCORE TO PAR-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingStart="8dp"
+                android:text="@string/ScoreToPar"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStScoreToParHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStScoreToPar"/>
+        </TableRow>
+        <!--AVERAGE SCORE TO PAR-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE PUTTS-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingStart="8dp"
+                android:text="@string/Putts"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStPuttsHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStPutts"/>
+        </TableRow>
+        <!--AVERAGE PUTTS-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE GREENS-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingStart="8dp"
+                android:text="@string/Greens"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStGreensHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStGreens"/>
+        </TableRow>
+        <!--AVERAGE GREENS-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE FAIRWAYS-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingStart="8dp"
+                android:text="@string/Fairways"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStFWsHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStFWs"/>
+        </TableRow>
+        <!--AVERAGE FAIRWAYS-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE UPDOWN-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingStart="8dp"
+                android:text="@string/Uds"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStUDsHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStUDs"/>
+        </TableRow>
+        <!--AVERAGE UPDOWN-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE EAGLES-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingLeft="8dp"
+                android:text="@string/Eagles"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStEaglesHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStEagless"/>
+        </TableRow>
+        <!--AVERAGE EAGLES-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE BIRDIES-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingLeft="8dp"
+                android:text="@string/Birdies"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStBirdiesHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStBirdies"/>
+        </TableRow>
+        <!--AVERAGE BIRDIES-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE PARS-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingLeft="8dp"
+                android:text="@string/Pars"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStParsHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStPars"/>
+        </TableRow>
+        <!--AVERAGE PARS-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <!--AVERAGE BOGEYS-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/dgrey75">
+
+            <TextView
+                android:gravity="right"
+                android:paddingRight="70dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingLeft="8dp"
+                android:text="@string/Bogeys"
+                android:layout_weight="4"
+                android:textSize="11pt"
+                android:id="@+id/lifeStBogeysHeader"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/lifeStBogeys"/>
+        </TableRow>
+        <!--AVERAGE BOGEYS-->
+
+        <!--SPACER ROW -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green55">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="12dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <!--SPACER ROW -->
+
+        <TableRow
+            android:background="@color/whiteOP"
+            android:gravity="center">
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9 Hole Stats"
+                android:id="@+id/switch1"
+                android:textSize="12pt"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/golf_course">
+
+    <com.ryancase.golf.TextViewCust
+        android:paddingTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Course"
+        android:theme="@style/TitleText"
+        android:textSize="30pt"
+        android:textColor="@color/newGreen"
+        android:id="@+id/courseSelectTitle"
+        android:layout_gravity="center"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TableRow
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="10dp">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="Course:"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="10pt"
+                android:textColor="@color/white"/>
+            <EditText
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:id="@+id/courseEditText"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="30dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@color/blackOP"
+                android:textColor="@color/white"
+                android:layout_weight="3"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="5dp">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="Slope:"
+                android:gravity="right"
+                android:numeric="integer"
+                android:layout_weight="1"
+                android:textSize="10pt"
+                android:textColor="@color/white"/>
+            <EditText
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:id="@+id/slopeEditText"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="30dp"
+                android:maxLines="1"
+                android:inputType="number|phone"
+                android:background="@color/blackOP"
+                android:textColor="@color/white"
+                android:layout_weight="2.8"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="10dp">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="Rating:"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:layout_weight="1"
+                android:textSize="10pt"
+                android:textColor="@color/white"/>
+            <EditText
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:id="@+id/ratingEditText"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="30dp"
+                android:background="@color/blackOP"
+                android:textColor="@color/white"
+                android:layout_weight="3"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="10dp">
+
+            <Button
+                android:layout_width="0px"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:text="Submit"
+                android:id="@+id/courseSubmit"
+                android:background="@drawable/button_bg"/>
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course List:"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:textSize="12pt"
+                android:background="@color/blackOP"
+                android:textColor="@color/green"/>
+        </TableRow>
+
+        <TableRow>
+            <ListView
+                android:paddingTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/courseList"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="8.0sp" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</LinearLayout>

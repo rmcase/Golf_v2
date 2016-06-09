@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/golf_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <!--<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">-->
+
+    <com.ryancase.golf.TextViewCust
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="45pt"
+        android:textColor="@color/black"
+        android:id="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:src="@drawable/golfstats" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_round"
+        android:layout_marginTop="190dp"
+        android:width="175dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/new_round_button"
+        android:background="@drawable/button_bg"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/history"
+        android:layout_marginTop="260dp"
+        android:width="175dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/history"
+        android:background="@drawable/button_bg" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stats"
+        android:layout_marginTop="330dp"
+        android:width="175dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/stats"
+        android:background="@drawable/button_bg"/>
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="525dp">
+
+            <Button
+                android:layout_width="0px"
+                android:layout_height="35dp"
+                android:text="Logout"
+                android:width="175dp"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/logout"
+                android:textColor="@color/white"
+                android:layout_weight="4"
+                android:background="@drawable/button_bg_alt"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1" />
+
+
+            <Button
+                android:layout_width="0px"
+                android:layout_height="35dp"
+                android:text="Help"
+                android:width="175dp"
+                android:layout_weight="4"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/help"
+                android:textColor="@color/white"
+                android:background="@drawable/button_bg_alt"/>
+        </LinearLayout>
+    </RelativeLayout>
+<!--</ScrollView>-->

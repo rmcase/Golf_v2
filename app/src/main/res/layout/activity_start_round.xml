@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/golf_bg"
+    tools:context="com.ryancase.golf.StartRound">
+
+    <!--Android:gravity sets the gravity of the content of the View its used on.
+        Android:layout_gravity sets the gravity of the View or Layout in its parent.-->
+
+    <!-- 100% — FF
+    95% — F2
+    90% — E6
+    85% — D9
+    80% — CC
+    75% — BF
+    70% — B3
+    65% — A6
+    60% — 99
+    55% — 8C
+    50% — 80
+    45% — 73
+    40% — 66
+    35% — 59
+    30% — 4D
+    25% — 40
+    20% — 33
+    15% — 26
+    10% — 1A
+    5% — 0D
+    0% — 00-->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/table">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/white50">
+
+            <com.ryancase.golf.TextViewCust
+                android:layout_height="wrap_content"
+                android:text="@string/h1"
+                android:theme="@style/TitleText"
+                android:textSize="30pt"
+                android:textColor="@color/newGreen"
+                android:id="@+id/Hole1TV"
+                android:layout_gravity="center"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="50px"
+                android:layout_width="wrap_content"/>
+
+        </TableRow>
+
+        <!-- SCORE PICKER ROW-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/NumberPicker">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+
+            <NumberPicker
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:id="@+id/scorePicker"
+                android:textAlignment="center"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <NumberPicker
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:id="@+id/scorePickerToPar"
+                android:textAlignment="center"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+
+        </TableRow>
+
+
+
+        <TableRow>
+            <TextView
+                android:text="PUTTS:"
+                android:textSize="9.75pt"
+                android:textStyle="bold"
+                android:textColor="@color/grey"/>
+        </TableRow>
+
+        <TableRow> <!-- BEGINNING OF PUTT ROW -->
+            <com.ryancase.golf.Checkbox
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="30px"
+                android:text="1"
+                android:layout_weight="4"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="11pt"
+                android:id="@+id/putt1"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.ryancase.golf.Checkbox
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="30px"
+                android:text="2"
+                android:textAlignment="gravity"
+                android:layout_weight="4"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/putt2"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.ryancase.golf.Checkbox
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="30px"
+                android:text="3"
+                android:textAlignment="gravity"
+                android:layout_weight="4"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/putt3"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.ryancase.golf.Checkbox
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="30px"
+                android:text="4"
+                android:layout_weight="4"
+                android:textStyle="bold"
+                android:textSize="11pt"
+                android:id="@+id/putt4"/>
+        </TableRow> <!-- END OF PUTT ROW -->
+
+        <!-- SPACER ROW -->
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <!-- SPACER ROW END -->
+
+        <!-- BEGINNING OF GIR ROW -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.ryancase.golf.Checkbox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="10dp"
+                android:text="Fairway"
+                android:layout_weight="4"
+                android:textStyle="bold"
+                android:textSize="12pt"
+                android:gravity="center"
+                android:id="@+id/fairway_box"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.ryancase.golf.Checkbox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="10dp"
+                android:text="Up/Down"
+                android:textAlignment="gravity"
+                android:layout_weight="3"
+                android:textStyle="bold"
+                android:textSize="12pt"
+                android:gravity="center"
+                android:id="@+id/ud_box"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.ryancase.golf.Checkbox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="10dp"
+                android:text="GIR"
+                android:textAlignment="gravity"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textSize="12pt"
+                android:gravity="center"
+                android:id="@+id/gir_box"/>
+        </TableRow> <!-- END OF GIR FW ROW -->
+
+
+        <TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="Exit Round"
+                android:layout_marginTop="50dp"
+                android:id="@+id/prev_button"
+                android:layout_weight="3"
+                android:textColor="@color/white"
+                android:background="@drawable/next_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="Next Hole"
+                android:layout_marginTop="50dp"
+                android:id="@+id/next_button"
+                android:layout_weight="3"
+                android:textColor="@color/white"
+                android:background="@drawable/next_bg" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <!--<ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qmark"
+        android:text="Exit Round"
+        android:id="@+id/help"
+        android:textColor="@color/white"
+        android:layout_marginTop="675dp"
+        android:background="@android:color/transparent"/>-->
+
+
+</RelativeLayout>
+

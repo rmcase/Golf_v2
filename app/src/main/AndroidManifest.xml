@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ryancase.golf" >
+
+    <application
+        android:name="com.ryancase.golf.ParseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Login"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LoginSignupActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.ryancase.golf.LoginSignupActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Help"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Help" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Holes"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Holes" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".CourseSelect"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">>
+
+            <intent-filter>
+                <action android:name="com.ryancase.golf.CourseSelect" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Hole1V2"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole1V2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Hole2V2"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole2V2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.parse.ui.ParseLoginActivity"
+            android:label="@string/app_name"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="com.ryancase.golf.ParseLoginActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED"
+                android:value="true" />
+            <meta-data
+                android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_EMAIL_AS_USERNAME"
+                android:value="true"/>
+            <meta-data
+                android:name="com.parse.ui.ParseLoginActivity.APP_LOGO"
+                android:resource="@drawable/golfstats_resize"/>
+        </activity>
+
+
+        <activity
+            android:name=".Hole3V2"
+            android:label="@string/h3"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole4V2"
+            android:label="@string/h4"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole4" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole5V2"
+            android:label="@string/h5"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole5" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole6V2"
+            android:label="@string/h6"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole6" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole7V2"
+            android:label="@string/h7"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole7" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole8V2"
+            android:label="@string/h8"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole8" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole9V2"
+            android:label="@string/h9"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole9" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole10"
+            android:label="@string/h10"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole10" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole11"
+            android:label="@string/h11"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole11" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole12"
+            android:label="@string/h12"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole12" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+        android:name=".Hole13"
+        android:label="@string/h13"
+        android:screenOrientation="portrait"
+        android:parentActivityName=".Holes" >
+        <intent-filter>
+            <action android:name="com.ryancase.golf.Hole13" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole14"
+            android:label="@string/h14"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole14" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole15"
+            android:label="@string/h15"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole15" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole16"
+            android:label="@string/h16"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole16" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole17"
+            android:label="@string/h17"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole17" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Hole18"
+            android:label="@string/h18"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole18" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".roundFinish"
+            android:label="Round Finish"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.roundFinish" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".roundFinishNine"
+            android:label="Round Finish Nine"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.roundFinishNine" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".History"
+            android:label="History"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.ryancase.golf.history" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".ListViewClick"
+            android:label="List View Click"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.listviewclick" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".TabHolder"
+            android:label="Tab Holder"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.tabholder" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".nineHoleTabBack"
+            android:label="Back Nine Tab"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.nineholetabback" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".nineHoleTab"
+            android:label="Front Nine Tab"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.frontninetab" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Stats"
+            android:label="Stats"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.stats" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Handicap"
+            android:label="Handicap"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.handicap" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+
+
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

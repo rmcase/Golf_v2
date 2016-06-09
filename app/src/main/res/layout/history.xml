@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/golf_course">
+
+    <com.ryancase.golf.TextViewCust
+        android:paddingTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:theme="@style/TitleText"
+        android:textSize="30pt"
+        android:textColor="@color/newGreen"
+        android:id="@+id/histTitle"
+        android:layout_gravity="center"/>
+
+
+    <ListView
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/roundList"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="12.0sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!--<ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/golfball_bg"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center"
+        android:id="@+id/historyHomeButton"
+        android:layout_marginTop="230dp"
+        android:paddingBottom="2dp"/>-->
+
+
+</LinearLayout>
