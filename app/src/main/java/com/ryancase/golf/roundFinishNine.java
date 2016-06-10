@@ -14,6 +14,8 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.ryancase.golf.Helpers.ArrayValues;
+import com.ryancase.golf.Holes.Hole9;
 
 import java.util.List;
 
@@ -75,7 +77,7 @@ public class roundFinishNine extends FragmentActivity {
         else {
             Toast.makeText(getApplicationContext(), "Sorry, please try saving again",
                     Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(), Hole9V2.class));
+            startActivity(new Intent(getApplicationContext(), Hole9.class));
         }
 
         StoreToParse();

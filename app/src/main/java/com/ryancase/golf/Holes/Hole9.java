@@ -1,4 +1,4 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Holes;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -16,8 +16,15 @@ import android.widget.CheckBox;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
+import com.ryancase.golf.Helpers.ArrayValues;
+import com.ryancase.golf.Helpers.Checkbox;
+import com.ryancase.golf.MainActivity;
+import com.ryancase.golf.R;
+import com.ryancase.golf.Helpers.TextViewCust;
+import com.ryancase.golf.roundFinishNine;
 
-public class Hole9V2 extends FragmentActivity {
+
+public class Hole9 extends FragmentActivity {
 
     //INSTANTIATE VARS//
     TextViewCust title;
@@ -39,7 +46,7 @@ public class Hole9V2 extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_round);
 
-        overridePendingTransition(R.anim.abc_slide_in_bottom, R.anim.abc_slide_out_top);
+        overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_in);
 
         title = (TextViewCust) findViewById(R.id.Hole1TV);
         title.setText("Hole 9");
@@ -242,19 +249,19 @@ public class Hole9V2 extends FragmentActivity {
                             Toast.LENGTH_SHORT).show();
                 }
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(Hole9V2.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Hole9.this);
                 builder.setMessage("Finish Round?")
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
 
-                                AlertDialog.Builder builder = new AlertDialog.Builder(Hole9V2.this);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(Hole9.this);
                                 builder.setMessage("Which Nine?")
                                         .setCancelable(false)
                                         .setPositiveButton("Front", new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
                                                 //startActivity(new Intent(getApplicationContext(), roundFinishNine.class));
-                                                Intent intent = new Intent(Hole9V2.this, roundFinishNine.class);
+                                                Intent intent = new Intent(Hole9.this, roundFinishNine.class);
                                                 Bundle b = new Bundle();
                                                 b.putString("nine", "front");
 
@@ -266,7 +273,7 @@ public class Hole9V2 extends FragmentActivity {
                                             public void onClick(DialogInterface dialog, int id) {
                                                 //dialog.cancel();
                                                 //startActivity(new Intent(getApplicationContext(), roundFinishNine.class));
-                                                Intent intent = new Intent(Hole9V2.this, roundFinishNine.class);
+                                                Intent intent = new Intent(Hole9.this, roundFinishNine.class);
                                                 Bundle b = new Bundle();
                                                 b.putString("nine", "back");
 

@@ -3,7 +3,7 @@
     package="com.ryancase.golf" >
 
     <application
-        android:name="com.ryancase.golf.ParseApp"
+        android:name=".Helpers.ParseApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Login"
+        <activity android:name=".Login.Login"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginSignupActivity"
+        <activity android:name=".Login.LoginSignupActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="com.ryancase.golf.LoginSignupActivity" />
@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Holes"
+        <activity android:name=".Holes.Holes"
             android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
@@ -64,7 +64,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Hole1V2"
+        <activity android:name=".Holes.Hole1"
             android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
@@ -73,7 +73,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Hole2V2"
+        <activity android:name=".Holes.Hole2"
             android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
@@ -105,10 +105,10 @@
 
 
         <activity
-            android:name=".Hole3V2"
+            android:name=".Holes.Hole3"
             android:label="@string/h3"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole3" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -119,10 +119,10 @@
         </activity>
 
         <activity
-            android:name=".Hole4V2"
+            android:name=".Holes.Hole4"
             android:label="@string/h4"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole4" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -133,10 +133,10 @@
         </activity>
 
         <activity
-            android:name=".Hole5V2"
+            android:name=".Holes.Hole5"
             android:label="@string/h5"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole5" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -147,10 +147,10 @@
         </activity>
 
         <activity
-            android:name=".Hole6V2"
+            android:name=".Holes.Hole6"
             android:label="@string/h6"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole6" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -161,10 +161,10 @@
         </activity>
 
         <activity
-            android:name=".Hole7V2"
+            android:name=".Holes.Hole7"
             android:label="@string/h7"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole7" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -175,10 +175,10 @@
         </activity>
 
         <activity
-            android:name=".Hole8V2"
+            android:name=".Holes.Hole8"
             android:label="@string/h8"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole8" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -189,10 +189,10 @@
         </activity>
 
         <activity
-            android:name=".Hole9V2"
+            android:name=".Holes.Hole9"
             android:label="@string/h9"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole9" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -203,10 +203,24 @@
         </activity>
 
         <activity
-            android:name=".Hole10"
+            android:name=".Holes.Hole9_"
+            android:label="hole9v2"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Holes.Holes" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.Hole9v2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Holes.Hole10"
             android:label="@string/h10"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole10" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -217,10 +231,10 @@
         </activity>
 
         <activity
-            android:name=".Hole11"
+            android:name=".Holes.Hole11"
             android:label="@string/h11"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole11" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -231,10 +245,10 @@
         </activity>
 
         <activity
-            android:name=".Hole12"
+            android:name=".Holes.Hole12"
             android:label="@string/h12"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole12" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -245,10 +259,10 @@
         </activity>
 
         <activity
-        android:name=".Hole13"
+        android:name=".Holes.Hole13"
         android:label="@string/h13"
         android:screenOrientation="portrait"
-        android:parentActivityName=".Holes" >
+        android:parentActivityName=".Holes.Holes" >
         <intent-filter>
             <action android:name="com.ryancase.golf.Hole13" />
             <category android:name="android.intent.category.DEFAULT" />
@@ -259,10 +273,10 @@
         </activity>
 
         <activity
-            android:name=".Hole14"
+            android:name=".Holes.Hole14"
             android:label="@string/h14"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole14" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -273,10 +287,10 @@
         </activity>
 
         <activity
-            android:name=".Hole15"
+            android:name=".Holes.Hole15"
             android:label="@string/h15"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole15" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -287,10 +301,10 @@
         </activity>
 
         <activity
-            android:name=".Hole16"
+            android:name=".Holes.Hole16"
             android:label="@string/h16"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole16" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -301,10 +315,10 @@
         </activity>
 
         <activity
-            android:name=".Hole17"
+            android:name=".Holes.Hole17"
             android:label="@string/h17"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole17" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -315,10 +329,10 @@
         </activity>
 
         <activity
-            android:name=".Hole18"
+            android:name=".Holes.Hole18"
             android:label="@string/h18"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.Hole18" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -332,7 +346,7 @@
             android:name=".roundFinish"
             android:label="Round Finish"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.roundFinish" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -346,7 +360,7 @@
             android:name=".roundFinishNine"
             android:label="Round Finish Nine"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.roundFinishNine" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -360,7 +374,7 @@
             android:name=".History"
             android:label="History"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes"
+            android:parentActivityName=".Holes.Holes"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="com.ryancase.golf.history" />
@@ -375,7 +389,7 @@
             android:name=".ListViewClick"
             android:label="List View Click"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.listviewclick" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -389,7 +403,7 @@
             android:name=".TabHolder"
             android:label="Tab Holder"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.tabholder" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -403,7 +417,7 @@
             android:name=".nineHoleTabBack"
             android:label="Back Nine Tab"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.nineholetabback" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -417,7 +431,7 @@
             android:name=".nineHoleTab"
             android:label="Front Nine Tab"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.frontninetab" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -431,7 +445,7 @@
             android:name=".Stats"
             android:label="Stats"
             android:screenOrientation="portrait"
-            android:parentActivityName=".Holes" >
+            android:parentActivityName=".Holes.Holes" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.stats" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -448,6 +462,20 @@
             android:parentActivityName=".MainActivity" >
             <intent-filter>
                 <action android:name="com.ryancase.golf.handicap" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ryancase.golf.MainActivity" />
+        </activity>
+        
+        <activity
+            android:name=".NineReview"
+            android:label="NineReview"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity" >
+            <intent-filter>
+                <action android:name="com.ryancase.golf.nineReview" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data

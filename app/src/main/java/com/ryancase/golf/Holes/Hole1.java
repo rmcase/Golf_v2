@@ -1,17 +1,14 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Holes;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.ryancase.golf.Helpers.ArrayValues;
 
 
-public class Hole1V2 extends Holes {
+public class Hole1 extends Holes {
 
     //DISABLE BACK BUTTON//
     @Override
@@ -60,10 +57,10 @@ public class Hole1V2 extends Holes {
         if(numPutts == 0) {
             Toast.makeText(getApplicationContext(), "Nice Hole Out!",
                     Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(), Hole2V2.class));
+            startActivity(new Intent(getApplicationContext(), Hole2.class));
         }
         else
-            startActivity(new Intent(getApplicationContext(), Hole2V2.class));
+            startActivity(new Intent(getApplicationContext(), Hole2.class));
     }
 
     @Override

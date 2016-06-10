@@ -1,10 +1,11 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Login;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
+import com.ryancase.golf.MainActivity;
+import com.ryancase.golf.R;
 
 import android.content.Intent;
 import android.os.Bundle;

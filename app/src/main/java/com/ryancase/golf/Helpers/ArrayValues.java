@@ -1,13 +1,8 @@
-package com.ryancase.golf;
-
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+package com.ryancase.golf.Helpers;
 
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
-import java.sql.Array;
-import java.sql.Struct;
 import java.util.ArrayList;
 
 /**

@@ -42,9 +42,10 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:background="@color/white50">
+            android:background="@color/white50"
+            android:id="@+id/titleRow">
 
-            <com.ryancase.golf.TextViewCust
+            <com.ryancase.golf.Helpers.TextViewCust
                 android:layout_height="wrap_content"
                 android:text="@string/h1"
                 android:theme="@style/TitleText"
@@ -116,7 +117,7 @@
         </TableRow>
 
         <TableRow> <!-- BEGINNING OF PUTT ROW -->
-            <com.ryancase.golf.Checkbox
+            <com.ryancase.golf.Helpers.Checkbox
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:button="@null"
@@ -133,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
 
-            <com.ryancase.golf.Checkbox
+            <com.ryancase.golf.Helpers.Checkbox
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:button="@null"
@@ -150,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
 
-            <com.ryancase.golf.Checkbox
+            <com.ryancase.golf.Helpers.Checkbox
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:button="@null"
@@ -167,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
 
-            <com.ryancase.golf.Checkbox
+            <com.ryancase.golf.Helpers.Checkbox
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:button="@null"
@@ -192,7 +193,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.ryancase.golf.Checkbox
+            <com.ryancase.golf.Helpers.Checkbox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
@@ -209,7 +210,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
 
-            <com.ryancase.golf.Checkbox
+            <com.ryancase.golf.Helpers.Checkbox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
@@ -227,7 +228,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
 
-            <com.ryancase.golf.Checkbox
+            <com.ryancase.golf.Helpers.Checkbox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"

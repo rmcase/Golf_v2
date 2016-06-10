@@ -1,11 +1,14 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Holes;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.ryancase.golf.Helpers.ArrayValues;
+import com.ryancase.golf.roundFinish;
 
-public class Hole5V2 extends Holes {
+
+public class Hole18 extends Holes {
 
     //DISABLE BACK BUTTON//
     @Override
@@ -19,7 +22,7 @@ public class Hole5V2 extends Holes {
         super.onCreate(savedInstanceState);
         setTitleText(parseHole(this.getClass().getSimpleName()));
 
-        setParMethod(4, ArrayValues.getFlag());
+        setParMethod(17, ArrayValues.getFlag());
     }
 
     @Override
@@ -28,16 +31,17 @@ public class Hole5V2 extends Holes {
         if(numPutts == 0) {
             Toast.makeText(getApplicationContext(), "Nice Hole Out!",
                     Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(), Hole6V2.class));
+            startActivity(new Intent(getApplicationContext(), roundFinish.class));
         }
         else
-            startActivity(new Intent(getApplicationContext(), Hole6V2.class));
+            startActivity(new Intent(getApplicationContext(), roundFinish.class));
     }
 
     @Override
     public void addLocalThings() {
         ArrayValues.addTheThings(girInt, score, fwInt, udInt, numPutts, par, parseHole(this.getClass().getSimpleName()) - 1);
     }
+
 }
 
 

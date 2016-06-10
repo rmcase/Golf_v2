@@ -1,11 +1,14 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Holes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.ryancase.golf.Helpers.ArrayValues;
 
-public class Hole17 extends Holes {
+
+public class Hole2 extends Holes {
 
     //DISABLE BACK BUTTON//
     @Override
@@ -19,7 +22,11 @@ public class Hole17 extends Holes {
         super.onCreate(savedInstanceState);
         setTitleText(parseHole(this.getClass().getSimpleName()));
 
-        setParMethod(16, ArrayValues.getFlag());
+        Log.d("Intlist size:", "" + ArrayValues.intList.size());
+
+        Log.d("Flagtwo", "" + ArrayValues.getFlag());
+
+        setParMethod(1, ArrayValues.getFlag());
     }
 
     @Override
@@ -28,10 +35,10 @@ public class Hole17 extends Holes {
         if(numPutts == 0) {
             Toast.makeText(getApplicationContext(), "Nice Hole Out!",
                     Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(), Hole18.class));
+            startActivity(new Intent(getApplicationContext(), Hole3.class));
         }
         else
-            startActivity(new Intent(getApplicationContext(), Hole18.class));
+            startActivity(new Intent(getApplicationContext(), Hole3.class));
     }
 
     @Override

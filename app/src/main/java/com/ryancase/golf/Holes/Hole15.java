@@ -1,8 +1,10 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Holes;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.ryancase.golf.Helpers.ArrayValues;
 
 
 public class Hole15 extends Holes {

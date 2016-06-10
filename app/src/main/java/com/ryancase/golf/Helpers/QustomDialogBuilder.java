@@ -1,4 +1,4 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Helpers;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.ryancase.golf.R;
 
 //import com.qustom.dialog.R;
 

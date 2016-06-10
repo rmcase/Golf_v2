@@ -1,4 +1,4 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Helpers;
 
 import android.app.Application;
 

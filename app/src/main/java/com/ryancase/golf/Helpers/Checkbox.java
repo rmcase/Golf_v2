@@ -1,9 +1,11 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Helpers;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.CheckBox;
+
+import com.ryancase.golf.R;
 
 /**
  * Created by ryancase on 11/4/15.

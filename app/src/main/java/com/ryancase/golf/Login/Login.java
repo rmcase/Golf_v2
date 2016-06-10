@@ -1,12 +1,11 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Login;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.parse.ParseAnonymousUtils;
 import com.parse.ParseUser;
-import com.parse.ui.ParseLoginBuilder;
+import com.ryancase.golf.MainActivity;
 
 /**
  * Created by ryancase on 1/19/16.

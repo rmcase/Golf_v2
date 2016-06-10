@@ -1,9 +1,7 @@
 package com.ryancase.golf;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
@@ -16,8 +14,9 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.ryancase.golf.Helpers.ArrayValues;
+import com.ryancase.golf.Holes.Hole18;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**

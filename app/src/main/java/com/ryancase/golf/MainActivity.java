@@ -11,6 +11,7 @@ import android.view.*;
 import android.widget.Button;
 
 import com.parse.ParseUser;
+import com.ryancase.golf.Login.LoginSignupActivity;
 
 
 public class MainActivity extends ActionBarActivity {

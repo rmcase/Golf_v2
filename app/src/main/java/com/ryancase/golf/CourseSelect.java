@@ -6,7 +6,6 @@ package com.ryancase.golf;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +22,8 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.ryancase.golf.Helpers.ArrayValues;
+import com.ryancase.golf.Holes.Hole1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -166,15 +167,18 @@ public class CourseSelect extends Activity {
                         "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen"};
 
                 //Log.d("PF", "" + ArrayValues.possibleFlag);
-
-                ParQuery(courses.get(position).toString());
+                try {
+                    ParQuery(courses.get(position).toString());
+                }catch (NullPointerException e) {
+                    Log.d("Error", "" + e);
+                }
                 //Log.d("PFA", "" + ArrayValues.possibleFlag);
                 //------------------------------------------------
                 Log.d("h1", "" + h1);
                 Log.d("parBool", "" + parBool);
                 Log.d("setFlag", "" + ArrayValues.getFlag());
                 //-------------------------------------------------
-                //Intent intent = new Intent(CourseSelect.this, Hole1V2.class);
+                //Intent intent = new Intent(CourseSelect.this, Hole1.class);
 
                 ArrayValues.course = courses.get(position).toString();
                 //ArrayValues.setCourse(courses.get(position).toString());
@@ -205,6 +209,7 @@ public class CourseSelect extends Activity {
                 "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen"};
 
         final String st = s;
+
         //––––––––––––––––––––––––––––––––––––––––––––––––––––––//
 
         //Query test to return objects with matching roundID to current user
@@ -222,7 +227,7 @@ public class CourseSelect extends Activity {
             public void done(List<ParseObject> parseObjects, ParseException e) { //Returns all objects in test with matching round id and course name
                 if (e == null) {
 
-                    t = new Intent(CourseSelect.this, Hole1V2.class);
+                    t = new Intent(CourseSelect.this, Hole1.class);
 
                     if (parseObjects.size() == 1) { //If an object is returned
 

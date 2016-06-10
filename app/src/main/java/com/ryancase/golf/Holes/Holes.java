@@ -1,31 +1,28 @@
-package com.ryancase.golf;
+package com.ryancase.golf.Holes;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.text.InputType;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.NumberPicker;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.ryancase.golf.Helpers.ArrayValues;
+import com.ryancase.golf.Helpers.Checkbox;
+import com.ryancase.golf.MainActivity;
+import com.ryancase.golf.R;
+import com.ryancase.golf.Helpers.TextViewCust;
 
 
 public class Holes extends FragmentActivity {
@@ -36,10 +33,13 @@ public class Holes extends FragmentActivity {
     NumberPicker np, nptp;
     Checkbox p1, p2, p3, p4, fw, gir, ud;
     Button n, finish, exit;
+    TableRow titleRow;
     int numPutts = 0, score = 0, girInt = 0, fwInt = 0, udInt = 0, par = 0;
     int currPutts=0;
     int currPlusMinus=0;
     int currScore=0;
+
+    public int thisHole = parseHole(this.getClass().getSimpleName()) - 1;
 
     //DISABLE BACK BUTTON//
     @Override
@@ -54,7 +54,7 @@ public class Holes extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_round);
 
-        overridePendingTransition(R.anim.abc_slide_in_bottom, R.anim.abc_slide_out_top);
+        overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_in);
         //getWindow().getAttributes().windowAnimations = R.anim.abc_slide_in_bottom;
 
         currPutts=0;
@@ -63,6 +63,7 @@ public class Holes extends FragmentActivity {
 
         title = (TextViewCust) findViewById(R.id.Hole1TV);
 
+        titleRow = (TableRow) findViewById(R.id.titleRow);
         OnClickListener titleListener =new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,10 +71,11 @@ public class Holes extends FragmentActivity {
             }
         };
         title.setOnClickListener(titleListener);
+        titleRow.setOnClickListener(titleListener);
 
         int[] placeHolder = new int[18];
 
-        for(int i=0; i<ArrayValues.scores.length; i++) {
+        for(int i = 0; i< ArrayValues.scores.length; i++) {
             placeHolder[i] = ArrayValues.par[i] + 3;
 
             currScore += ArrayValues.scores[i];
@@ -82,6 +84,8 @@ public class Holes extends FragmentActivity {
             }
             currPutts += ArrayValues.putts[i];
         }
+
+        //setParMethod(parseHole(getClass().getSimpleName()), ArrayValues.getFlag());
 
         ud = (Checkbox) findViewById(R.id.ud_box);
         fw = (Checkbox) findViewById(R.id.fairway_box);
@@ -150,9 +154,9 @@ public class Holes extends FragmentActivity {
                 currScore = 0;
                 currPutts = 0;
                 currPlusMinus = 0;
-                curr_score.setText("0");
-                curr_putts.setText("0");
-                curr_plusMinus.setText("0");
+                curr_score = null;
+                curr_putts = null;
+                curr_plusMinus = null;
 
 
                 finish();
@@ -375,14 +379,17 @@ public class Holes extends FragmentActivity {
             if(Character.isDigit(s.charAt(i))) {
                 l = s.charAt(i);
 
-                if(Character.isDigit(s.charAt(i + 1))) {
-                    m = s.charAt(i + 1);
-                    String d = l.toString() + m.toString();
-                    Log.d("D", "" + d);
-                    x = Integer.parseInt(d);
-                    break;
+                try {
+                    if (Character.isDigit(s.charAt(i + 1))) {
+                        m = s.charAt(i + 1);
+                        String d = l.toString() + m.toString();
+                        Log.d("D", "" + d);
+                        x = Integer.parseInt(d);
+                        break;
+                    }
+                } catch (IndexOutOfBoundsException e) {
+                    Log.d("", "" + e);
                 }
-
                 x = Character.getNumericValue(l);
                 break;
             }
@@ -405,10 +412,10 @@ public class Holes extends FragmentActivity {
         if(numPutts == 0) {
             Toast.makeText(getApplicationContext(), "Nice Hole Out!",
                     Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(), Hole1V2.class));
+            startActivity(new Intent(getApplicationContext(), Hole1.class));
         }
         else
-            startActivity(new Intent(getApplicationContext(), Hole1V2.class));
+            startActivity(new Intent(getApplicationContext(), Hole1.class));
     }
 
     private void setDividerColor(NumberPicker picker, int color) {
